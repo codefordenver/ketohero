@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
+    "postinstall": "webpack --config ./server/webpack.prod.config.js --progress --colors",
     "start": "node .",
     "pretest": "jshint .",
     "posttest": "nsp check"
@@ -16,6 +17,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
+    "express": "^4.13.4",
     "helmet": "^1.3.0",
     "lodash": "^4.8.2",
     "loopback": "^2.22.0",
