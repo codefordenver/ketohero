@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
-    "postinstall": "webpack --config ./server/webpack.prod.config.js",
+    "postinstall": "webpack --config server/webpack.prod.config.js --progress",
     "start": "node .",
     "pretest": "jshint .",
     "posttest": "nsp check"
