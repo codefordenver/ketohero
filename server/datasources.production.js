@@ -1,16 +1,16 @@
 module.exports = {
-  db: {
-    name: 'db',
-    connector: 'memory'
+  "db": {
+    "name": "db",
+    "connector": "memory"
   },
-
-  postgres: {
-    host: process.env.PG_HOST,
-    port: process.env.PG_PORT,
-    database: process.env.PG_DB,
-    username: process.env.PG_USER,
-    password: process.env.PG_PW,
-    name: 'postgres',
-    connector: 'postgresql'
+  "postgres": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "devin",
+    "username": "devin",
+    "password": "Visitor5",
+    "name": "postgres",
+    "connector": "postgresql",
+    "debug": true
   }
-};
+}
