@@ -1,17 +1,16 @@
-var Server = require('../frontend-server.js');
-var app = Server.app();
-
+var webpack = require('webpack');
+var devConfig = require('../webpack.dev.config.js');
+var prodConfig = require('../webpack.prod.config.js');
 
 // If the node_env is NOT set to production, run the webpackdev server
 // Uses the webpack.dev.config.js file for webpack configuration.
 if (process.env.NODE_ENV !== 'production') {
 
-	var webpack = require('webpack');
+	
 	var WebpackDevServer = require('webpack-dev-server');
-	var config = require('../webpack.dev.config');
 
-	new WebpackDevServer(webpack(config), {
-	  publicPath: config.output.publicPath,
+	new WebpackDevServer(webpack(devConfig), {
+	  publicPath: devConfig.output.publicPath,
 	  hot: true,
 	  historyApiFallback: false
 	}).listen(8080, '0.0.0.0', function (err, result) {
@@ -24,6 +23,12 @@ if (process.env.NODE_ENV !== 'production') {
 } 
 // Otherwise, run a simple express server to serve up the frontend files.
 else {
-	app.listen(8080)
-	console.log("Serving up the frontend at http://localhost:8080");
+	var compiler = webpack(prodConfig);
+	compiler.run(function(err, stats){
+		if (err) {
+			console.log(err);
+			return;
+		}
+		console.log('webpacked for production');
+	})
 }
