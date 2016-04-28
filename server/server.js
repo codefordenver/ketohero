@@ -9,7 +9,7 @@ if (process.env.NODE_ENV==='production') {
 app.use('/client', function (req, res) {
   res.sendFile(path.join(__dirname, '../client/index.html'));
 })
-app.use('/public', loopback.static(path.join(__dirname, '../dist/public')));
+app.use('/dist', loopback.static(path.join(__dirname, '../client/dist')));
 };
 
 app.start = function() {
