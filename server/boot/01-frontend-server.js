@@ -1,6 +1,5 @@
 var webpack = require('webpack');
 var devConfig = require('../webpack.dev.config.js');
-var prodConfig = require('../webpack.prod.config.js');
 
 // If the node_env is NOT set to production, run the webpackdev server
 // Uses the webpack.dev.config.js file for webpack configuration.
@@ -20,15 +19,4 @@ if (process.env.NODE_ENV !== 'production') {
 
 	  console.log('Frontend located at http://localhost:8080/client/');
 	});
-} 
-// Otherwise, run a simple express server to serve up the frontend files.
-else {
-	var compiler = webpack(prodConfig);
-	compiler.run(function(err, stats){
-		if (err) {
-			console.log(err);
-			return;
-		}
-		console.log('webpacked for production');
-	})
 }
