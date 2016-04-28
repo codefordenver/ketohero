@@ -4,10 +4,10 @@ var webpack = require('webpack');
 module.exports = {
   devtool: 'source-map',
   entry: [
-    path.resolve(__dirname, '../client/src/index.js')
+    path.join(__dirname, '../client/src/index.js')
   ],
   output: {
-    path: path.resolve(__dirname, '../client/dist'),
+    path: path.join(__dirname, '../client/dist'),
     filename: 'bundle.js',
     publicPath: '/dist/'
   },
@@ -29,7 +29,7 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       loaders: ['react-hot', 'babel'],
-      include: path.resolve(__dirname, '../client/src')
+      include: path.join(__dirname, '../client/src')
     }]
   }
 };
