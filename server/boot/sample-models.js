@@ -9,17 +9,17 @@ module.exports = function(app) {
     },
     {
       username: 'willydouglas',
-      email: 'willy@weastcolfax.com',
+      email: 'willy@eastcolfaxcorner.com',
       password: 'password123'
     },
     {
       username: 'devindeScenza',
-      email: 'devin@weastcolfax.com',
+      email: 'devin@sketchyalley.com',
       password: 'password123'
     },
     {
       username: 'ryanbird',
-      email: 'ryan@weastcolfax.com',
+      email: 'ryan@eastaurora.com',
       password: 'password123'
     }
   ];
