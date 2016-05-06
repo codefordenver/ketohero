@@ -165,36 +165,6 @@ module.exports = function(app) {
     }
   ]
 
-  // User.create(users[0], function(err, user) {
-  //   if (err) throw err;
-  //   console.log('Created user:', user);
-  //   usermeals[0] = {userId: user.id};
-
-  //   Meal.create(meals[0], function(err, meal){
-  //     if (err) throw err;
-  //     console.log('Created meal', meal);
-  //     usermeals[0].mealId = meal.id;
-
-  //     UserMeal.create(usermeals[0], function(err, usermeal) {
-  //       if (err) throw err;
-  //       console.log('Created usermeal', usermeal);
-
-  //     })
-
-
-  //     foods[0].mealId = meal.id
-  //     foods[1].mealId = meal.id
-  //     Food.create(foods[0], function(err, food){
-  //       if (err) throw err
-  //         console.log('Food created:', food)
-  //     })
-  //     Food.create(foods[1], function(err, food){
-  //       if (err) throw err
-  //         console.log('Food created:', food)
-  //     })
-  //   })
-  // });
-
   User.create(users, function(err, users) {
     if (err) throw err;
 

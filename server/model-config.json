@@ -41,7 +41,7 @@
   },
   "mealfood": {
     "dataSource": "postgres",
-    "public": false
+    "public": true
   },
   "meal": {
     "dataSource": "postgres",
@@ -53,6 +53,6 @@
   },
   "usermeal": {
     "dataSource": "postgres",
-    "public": false
+    "public": true
   }
 }
