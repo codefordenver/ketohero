@@ -5,11 +5,11 @@ var path = require('path');
 var app = module.exports = loopback();
 
 
-if (process.env.NODE_ENV==='production') {
-  app.use('/client', function (req, res) {
+if (process.env.NODE_ENV === 'production') {
+  app.use('/', function (req, res) {
     res.sendFile(path.join(__dirname, '../client/index.html'));
   });
-  app.use(loopback.static(path.join(__dirname, '../client')));
+  app.use('/', loopback.static(path.join(__dirname, '../client')));
 };
 
 app.start = function() {
