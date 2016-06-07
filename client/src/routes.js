@@ -5,6 +5,7 @@ import LoginContainer from './containers/LoginContainer';
 import ViewContainer from './containers/ViewContainer';
 import FoodList from './components/FoodList';
 import UserMealsListContainer from './containers/UserMealsListContainer';
+import MealContainer from './containers/MealContainer';
 
 const routes = (
   <Route path='/' component={App}>
@@ -12,6 +13,7 @@ const routes = (
     <Route path='/home' component={ViewContainer}>
       <IndexRoute component={UserMealsListContainer} />
       <Route path='/foodlist' component={FoodList} />
+      <Route path='/meal/:mealId' component={MealContainer} />
     </Route>
   </Route>
 );

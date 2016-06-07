@@ -22,7 +22,7 @@ class FoodList extends React.Component {
       )
     } else {
     	const foodList = foodData.map(food => {
-        return <FoodItem {...food} key={food.id} />
+        return <FoodItem food={food} key={food.id} />
       })
       return (
         <div>

@@ -4,17 +4,12 @@ import FoodItem from './FoodItem';
 import Quantity from './Quantity'
 
 
-export default class MealItem extends React.Component {
-
-
-  render() {
-
-    return (
-      <div>
-        <FoodItem id={this.props.id}>
-          <Quantity quantity={this.props.quantity} />
-        </FoodItem>
-      </div>
-    )
-  }
+const MealItem = (props) => {
+  return (
+    <div>
+      <FoodItem food={props.food} quantity={props.quantity} />
+    </div>
+  )
 }
+
+export default MealItem

@@ -114,7 +114,7 @@ module.exports = function(app) {
       mealId: 2
     },
     {
-      userId: 2,
+      userId: 1,
       mealId: 3
     },
     {
@@ -122,19 +122,7 @@ module.exports = function(app) {
       mealId: 4
     },
     {
-      userId: 3,
-      mealId: 5
-    },
-    {
-      userId: 3,
-      mealId: 6
-    },
-    {
-      userId: 1,
-      mealId: 4
-    },
-    {
-      userId: 1,
+      userId: 2,
       mealId: 5
     },
     {
@@ -142,16 +130,28 @@ module.exports = function(app) {
       mealId: 6
     },
     {
-      userId: 2,
+      userId: 3,
       mealId: 1
     },
     {
       userId: 3,
-      mealId: 2
+      mealId: 3
     },
     {
       userId: 3,
-      mealId: 3
+      mealId: 5
+    },
+    {
+      userId: 4,
+      mealId: 2
+    },
+    {
+      userId: 4,
+      mealId: 4
+    },
+    {
+      userId: 4,
+      mealId: 6
     }
   ]
 

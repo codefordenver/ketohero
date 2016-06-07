@@ -1,6 +1,7 @@
 import React from 'react';
 
 import UserMeal from './UserMeal';
+import { Link } from 'react-router';
 
 class UserMealsList extends React.Component {
   constructor(props) {
@@ -17,7 +18,11 @@ class UserMealsList extends React.Component {
     }
 
     const meals = this.props.meals.map((meal, index) => {
-      return <UserMeal userMeal={meal} key={meal.id} />
+      return (
+        <Link to={`meal/${meal.id}`} key={meal.id}>
+          <UserMeal userMeal={meal} key={meal.id} />
+        </Link>
+      )
     });
 
     return (

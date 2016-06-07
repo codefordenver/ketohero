@@ -121,6 +121,28 @@ export function fetchUserMeals(userToken, userId) {
   }
 }
 
+function requestMealData() {
+  return {
+    type: 'REQUEST_MEAL_DATA'
+  }
+}
+
+function receiveMealData(json) {
+  return {
+    type: 'RECEIVE_MEAL_DATA',
+    payload: json
+  }
+}
+export function fetchMealData(userToken, mealId) {
+  return dispatch => {
+    dispatch(requestFood());
+    const url = `http://localhost:3000/api/mealfoods?filter=%7B%22include%22%3A%22food%22%2C%20%22where%22%3A%7B%22mealId%22%3A${mealId}%7D%7D&access_token=${userToken}`;
+    return fetch(url)
+      .then(response => response.json())
+      .then(json => dispatch(receiveMealData(json)))
+  }
+}
+
 /*
 fetch('/api/users/login',
   {
