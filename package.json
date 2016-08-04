@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node .",
     "pretest": "jshint .",
-    "posttest": "nsp check"
+    "posttest": "nsp check",
+    "app": "node ."
   },
   "dependencies": {
     "async": "^2.0.0-rc.6",

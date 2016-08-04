@@ -31,9 +31,9 @@ Once `vagrant up` has finished, follow these steps to start the server.
 
 1. `vagrant ssh` to login into the virtual machine.
 2. `cd /vagrant` to navigate to the project.
-3. `node .` to start the server.
-4. Open your browser
-5.
+3. `npm run app` or `node .` to start the api and client (webpack-dev-server).
+4. Open a second terminal, navigate to the project folder, and run `vagrant rsync-auto` (required for rsync file syncing and webpack hot reload)
+5. Open your browser
 	- Backend:	http://ketohero.dev:3000/explorer
 	- Frontend:	http://ketohero.dev:8080
 6. Rejoice!
